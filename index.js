@@ -116,7 +116,7 @@ async function run() {
     app.get("/servicesbylimit", async (req, res) => {
       const quary = {};
       const cursor = serviceCollection.find(quary).sort({ _id: -1 }); // sort({ _id: -1 }) recent add kora ta aga dekhabe
-      const result = await cursor.limit(6).toArray();
+      const result = await cursor.limit(8).toArray();
       res.send(result);
     });
 
@@ -124,7 +124,7 @@ async function run() {
       const search = req.query.search || "";
       const category = req.query.category || "";
       const page = parseInt(req.query.page) || 1;
-      const limit = parseInt(req.query.limit) || 6;
+      const limit = parseInt(req.query.limit) || 8;
       const skip = (page - 1) * limit;
 
       try {
