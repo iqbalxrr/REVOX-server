@@ -97,7 +97,7 @@ async function run() {
         }
         await countUsers();
 
-        // Count Services and Reviews from MongoDB
+        // Count Services and Reviews from MongoDB ...
         const totalServices = await serviceCollection.countDocuments();
         const totalReviews = await rattingsCollection.countDocuments();
 
