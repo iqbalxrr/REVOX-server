@@ -1,0 +1,9 @@
+# .env
+# .vercel
+# serviceAccountKey.json
+# REVOX-server.git/
+
+echo serviceAccountKey.json >> .gitignore
+echo REVOX-server.git/ >> .gitignore
+echo node_modules/ >> .gitignore
+echo .env >> .gitignore
