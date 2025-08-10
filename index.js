@@ -86,7 +86,7 @@ async function run() {
 
     app.get("/counts", async (req, res) => {
       try {
-        // Count Firebase Auth Users
+        // Count Firebase Auth Users....
         let userCount = 0;
         async function countUsers(nextPageToken) {
           const result = await admin.auth().listUsers(1000, nextPageToken);
